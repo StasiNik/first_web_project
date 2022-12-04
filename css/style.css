@@ -15,7 +15,6 @@ body {
 .element {
     margin-left: 10px;
     margin-right: 10px;
-
 }
 
 .nav {
@@ -56,8 +55,8 @@ h1 {
 }
 
 .about-container p {
-    margin-left: 300px;
-    margin-right: 300px;
+    margin: 0px auto;
+    width: 85%;
 }
 
 .about-container button {
@@ -73,6 +72,16 @@ h1 {
     color: chocolate;
 }
 
+.skill-container {
+    text-align: center;
+    width: 25%;
+    float: left;
+}
+
+.pizdec{
+    color: rgba(240, 248, 255, 0);
+}
+
 .cases .text {
     text-align: center;
 }
@@ -85,10 +94,12 @@ h1 {
     height: 30px;
     width: 150px;
     margin-top: 20px;
+    
 }
 
 .photo {
     text-align: center;
+    width: 100%;
 }
 
 h2 {
@@ -103,7 +114,7 @@ h2 {
     background-color: #eeeeee;
     border: 0px solid white;
     height: 50px;
-    width: 900px;
+    width: 85%;
 }
 
 hr {
@@ -130,6 +141,12 @@ hr {
 .contacts {
     background-image: url(../image/background2.png);
     color: aliceblue;
+}
+
+.info {
+    text-align: center;
+    width: 33.3%;
+    float: left;
 }
 
 .contacts button {
