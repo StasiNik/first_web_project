@@ -7,14 +7,14 @@ body {
     margin: 0px;
 }
 
-nav{
+nav {
     width: 100%;
     height: 60px;
     background-color: #344051;
     position: fixed;
 }
 
-.logo{
+.logo {
     color: white;
     font-size: 20px;
     line-height: 60px;
@@ -22,16 +22,16 @@ nav{
     float: left;
 }
 
-.menu{
+.menu {
     /*float:left;*/
     padding-left: 500px;
 }
 
 .menu li {
     list-style-type: none;
-    float:left;
+    float: left;
     line-height: 30px;
-    color:  white;
+    color: white;
     margin-right: 40px;
     font-size: 16px;
     text-transform: uppercase;
@@ -48,22 +48,20 @@ h1 {
     text-align: right;
     height: 100vh;
     overflow: hidden;
-    vertical-align	: middle;
+    vertical-align: middle;
 }
 
-.left{
+.left {
     text-align: center;
     float: left;
 }
 
-.right img{
+.right img {
     height: 100vh;
     width: 50wh;
 }
 
-.content-title{
-    
-}
+.content-title {}
 
 /* .title-container  image {
     height: 50%;
@@ -97,7 +95,7 @@ h1 {
     height: 30px;
 }
 
-hr{
+hr {
     width: 5%;
     border-top: 10px #ff9100;
     border-left: 10px #ff9100;
@@ -125,13 +123,13 @@ hr{
     height: 45vh;
 }
 
-.skill-container#last{
+.skill-container#last {
     text-align: center;
     width: 25%;
     height: 49vh;
 }
 
-.pizdec{
+.pizdec {
     color: rgba(240, 248, 255, 0);
 }
 
@@ -266,6 +264,15 @@ button {
     border-radius: 5px;
 }
 
+button:hover {
+    scale: 1.10;
+    -webkit-transition: All 0.5s ease;
+    -moz-transition: All 0.5s ease;
+    -o-transition: All 0.5s ease;
+    -ms-transition: All 0.5s ease;
+    transition: All 0.5s ease;
+}
+
 .rewiews {
     /* Указываем высоту которую мы будем видеть */
     /*height: 190px;
@@ -300,7 +307,7 @@ body::-webkit-scrollbar-thumb {
     /* border: 3px solid orange;  padding вокруг плашки */
 }
 
-.calculation>hr{
+.calculation>hr {
     margin-top: 20px;
     border-width: 1px;
     border-radius: 0px;
