@@ -7,26 +7,34 @@ body {
     margin: 0px;
 }
 
-.menu {
-    justify-content: space-around;
-    display: flex;
+nav{
+    width: 100%;
+    height: 60px;
+    background-color: #344051;
+    position: fixed;
 }
 
-.element {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.nav {
-    display: flex;
-    justify-content: space-around;
-    background-color: #54657e;
-    margin: 0px;
-    border: 0px;
-    font-size: 20px;
-    height: 30px;
-    flex-wrap: wrap-reverse;
+.logo{
     color: white;
+    font-size: 20px;
+    line-height: 60px;
+    padding-left: 250px;
+    float: left;
+}
+
+.menu{
+    /*float:left;*/
+    padding-left: 500px;
+}
+
+.menu li {
+    list-style-type: none;
+    float:left;
+    line-height: 30px;
+    color:  white;
+    margin-right: 40px;
+    font-size: 16px;
+    text-transform: uppercase;
 }
 
 h1 {
@@ -35,9 +43,32 @@ h1 {
 }
 
 .title-container {
+    padding-top: 60px;
     background-image: url("../image/background.png");
-    text-align: center;
+    text-align: right;
+    height: 100vh;
+    overflow: hidden;
+    vertical-align	: middle;
 }
+
+.left{
+    text-align: center;
+    float: left;
+}
+
+.right img{
+    height: 100vh;
+    width: 50wh;
+}
+
+.content-title{
+    
+}
+
+/* .title-container  image {
+    height: 50%;
+    width: 50%;
+} */
 
 .title-container button {
     width: 100px;
@@ -46,6 +77,8 @@ h1 {
 
 .about-container {
     text-align: center;
+    height: 70vh;
+    padding-top: 50px;
 }
 
 .about-container #picture {
@@ -64,8 +97,21 @@ h1 {
     height: 30px;
 }
 
+hr{
+    width: 5%;
+    border-top: 10px #ff9100;
+    border-left: 10px #ff9100;
+    border-width: 4px;
+    border-color: #ff9100;
+    background: #ff9100;
+}
+
 .wic {
     background-image: url("../image/background4.png");
+}
+
+.wic h2 {
+    padding-top: 100px;
 }
 
 .skill-container h3 {
@@ -76,15 +122,23 @@ h1 {
     text-align: center;
     width: 25%;
     float: left;
+    height: 45vh;
+}
+
+.skill-container#last{
+    text-align: center;
+    width: 25%;
+    height: 49vh;
 }
 
 .pizdec{
     color: rgba(240, 248, 255, 0);
 }
 
-.cases .text {
+.cases {
     text-align: center;
 }
+
 
 .cases button {
     color: white;
@@ -94,12 +148,12 @@ h1 {
     height: 30px;
     width: 150px;
     margin-top: 20px;
-    
 }
 
 .photo {
     text-align: center;
-    width: 100%;
+    width: 80%;
+    height: 80%;
 }
 
 h2 {
@@ -114,20 +168,24 @@ h2 {
     background-color: #eeeeee;
     border: 0px solid white;
     height: 50px;
-    width: 85%;
-}
-
-hr {
-    width: 70%;
-    margin-top: 40px;
+    width: 75%;
 }
 
 .statistics {
     background-image: url(../image/background3.png);
 }
 
+.statistics h2 {
+    padding-top: 100px;
+}
+
 .rewiews {
     text-align: center;
+    height: 60vh;
+}
+
+.rewiews h2 {
+    padding-top: 45px;
 }
 
 .contacts p {
@@ -141,6 +199,11 @@ hr {
 .contacts {
     background-image: url(../image/background2.png);
     color: aliceblue;
+    height: 105vh;
+}
+
+.contacts h2 {
+    padding-top: 50px;
 }
 
 .info {
@@ -203,18 +266,15 @@ button {
     border-radius: 5px;
 }
 
-
-
-/* Вот скрол */
 .rewiews {
     /* Указываем высоту которую мы будем видеть */
-    height: 190px;
+    /*height: 190px;
     /* говорим что нужен для этого блока скролы */
     /* overflow: auto;  чтоб он сам догадвался что именно нужно*/
     /* overflow: scroll; и так и сяк*/
     /* ещё можно так */
-    overflow-x: hidden;
-    overflow-y: scroll;
+    /*overflow-x: hidden;*/
+    /*overflow-y: scroll;*/
 }
 
 /* чтоб крол был поверх контента */
@@ -224,7 +284,7 @@ body {
 
 /* стилиизация скрола */
 body::-webkit-scrollbar {
-    width: 5px;
+    width: 10px;
     /* ширина scrollbar */
 }
 
@@ -233,10 +293,18 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: blue;
+    background-color: rgb(137, 164, 192);
     /* цвет плашки */
     border-radius: 20px;
     /*закругления плашки */
     /* border: 3px solid orange;  padding вокруг плашки */
 }
 
+.calculation>hr{
+    margin-top: 20px;
+    border-width: 1px;
+    border-radius: 0px;
+    background: #d1d1d1;
+    border-color: #d1d1d1;
+    width: 74.5%;
+}
