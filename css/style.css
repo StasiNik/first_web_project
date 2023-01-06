@@ -319,7 +319,7 @@ body::-webkit-scrollbar-thumb {
     width: 74.5%;
 }
 
-@media (min-width: 0px) and (max-width: 800px) {
+@media (min-width: 0px) and (max-width: 1100px) {
     .skill-container {
         width: 100%;
         float: none;
