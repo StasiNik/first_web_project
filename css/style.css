@@ -1,11 +1,10 @@
 @font-face {
-	font-family: 'Franklin';
-	src: url('../fonts/ofont.ru_Franklin Gothic Medium.eot');
-	src: local('☺'), url('../fonts/ofont.ru_Franklin Gothic Medium.woff') format('woff')
-     url('../fonts/ofont.ru_Franklin Gothic Medium.ttf') format('truetype'), 
-     url('../fonts/ofont.ru_Franklin Gothic Medium.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'Franklin';
+    src: url('../fonts/ofont.ru_Franklin Gothic Medium.eot');
+    src: local('☺'), url('../fonts/ofont.ru_Franklin Gothic Medium.woff') format('woff') url('../fonts/ofont.ru_Franklin Gothic Medium.ttf') format('truetype'),
+        url('../fonts/ofont.ru_Franklin Gothic Medium.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 html {
@@ -65,8 +64,8 @@ h1 {
 
 .left {
     position: relative;
-    top:28vh;
-    left:15vw;
+    top: 28vh;
+    left: 15vw;
     text-align: center;
     float: left;
 }
@@ -75,13 +74,6 @@ h1 {
     height: 100vh;
     width: 50wh;
 }
-
-.content-title {}
-
-/* .title-container  image {
-    height: 50%;
-    width: 50%;
-} */
 
 .title-container button {
     width: 100px;
@@ -325,4 +317,29 @@ body::-webkit-scrollbar-thumb {
     background: #d1d1d1;
     border-color: #d1d1d1;
     width: 74.5%;
+}
+
+@media (min-width: 0px) and (max-width: 800px) {
+    .skill-container {
+        width: 100%;
+        float: none;
+        height: 20vh;
+    }
+    
+    .wic{
+        margin-top: 60px;
+        background-size: cover;
+    }
+
+    .wic h2{
+        padding-top: 20px;
+    }
+
+    .statistics{
+        margin-top: 60px;
+        background-size: cover;
+    }
+    .statistics h2{
+        padding-top: 20px;
+    }
 }
