@@ -319,27 +319,28 @@ body::-webkit-scrollbar-thumb {
     width: 74.5%;
 }
 
-@media (min-width: 0px) and (max-width: 2200px) {
+@media (orientation: portrait) {
     .skill-container {
         width: 100%;
         float: none;
         height: 20vh;
     }
-    
-    .wic{
+
+    .wic {
         margin-top: 60px;
         background-size: cover;
     }
 
-    .wic h2{
+    .wic h2 {
         padding-top: 20px;
     }
 
-    .statistics{
+    .statistics {
         margin-top: 60px;
         background-size: cover;
     }
-    .statistics h2{
+
+    .statistics h2 {
         padding-top: 20px;
     }
 }
