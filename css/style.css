@@ -22,24 +22,26 @@ nav {
     height: 60px;
     background-color: #344051;
     position: fixed;
+    top:0px;
+    left: 0px;
+    display: flex;
+    align-items:center;
+    justify-content:space-around;
 }
 
 .logo {
     color: white;
     font-size: 20px;
-    line-height: 60px;
+    /* line-height: 60px;*/
     padding-left: 250px;
-    float: left;
 }
-
-.menu {
-    /*float:left;*/
-    padding-left: 500px;
+ul{
+    display: flex;
+    justify-content:space-around;
 }
 
 .menu li {
     list-style-type: none;
-    float: left;
     line-height: 30px;
     color: white;
     margin-right: 40px;
@@ -54,8 +56,9 @@ h1 {
 }
 
 .title-container {
-    padding-top: 60px;
+    margin-top: 60px;
     background-image: url("../image/background.png");
+    background-size: cover;
     text-align: right;
     height: 100vh;
     overflow: hidden;
@@ -319,7 +322,7 @@ body::-webkit-scrollbar-thumb {
     width: 74.5%;
 }
 
-@media (orientation: portrait) {
+@media (orientation: portrait), (max-width: 1000px) {
     .skill-container {
         width: 100%;
         float: none;
@@ -342,5 +345,19 @@ body::-webkit-scrollbar-thumb {
 
     .statistics h2 {
         padding-top: 20px;
+    }
+
+    .logo{
+        padding-left: 0px;
+    }
+
+    .content-title .left{
+        float: none;
+        color: white;
+    }
+
+    .title-container{
+        filter: brightness(50%);
+        background-color:rgba(0, 0, 0, .5);
     }
 }
