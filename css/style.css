@@ -22,29 +22,31 @@ nav {
     height: 60px;
     background-color: #344051;
     position: fixed;
-    top:0px;
+    top: 0px;
     left: 0px;
     display: flex;
-    align-items:center;
-    justify-content:space-around;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 999999;
 }
 
 .logo {
     color: white;
     font-size: 20px;
-    /* line-height: 60px;*/
     padding-left: 250px;
 }
-ul{
+
+ul {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
 }
 
 .menu li {
+    width: 7vw;
+    margin: 7px;
     list-style-type: none;
     line-height: 30px;
     color: white;
-    margin-right: 40px;
     font-size: 16px;
     text-transform: uppercase;
 }
@@ -53,16 +55,20 @@ h1 {
     margin-top: 0px;
     font-size: 4em;
     text-align: center;
+    margin-block-end: 0.3em
 }
 
 .title-container {
     margin-top: 60px;
     background-image: url("../image/background.png");
     background-size: cover;
-    text-align: right;
-    height: 100vh;
+    height: 91vh;
     overflow: hidden;
-    vertical-align: middle;
+}
+
+.content-title {
+    display: flex;
+    justify-content: space-between;
 }
 
 .left {
@@ -70,7 +76,26 @@ h1 {
     top: 28vh;
     left: 15vw;
     text-align: center;
-    float: left;
+    float: none;
+    display: block;
+    animation: my_animation 2s;
+    animation-fill-mode: both;
+}
+
+.left h4 {
+    margin-bottom: 2em;
+}
+
+@keyframes my_animation {
+    from {
+        left: -800px;
+        opacity: 0
+    }
+
+    to {
+        left: 15vw;
+        opacity: 1
+    }
 }
 
 .right img {
@@ -81,6 +106,8 @@ h1 {
 .title-container button {
     width: 100px;
     height: 30px;
+    padding: 0px;
+    margin-right: 5%;
 }
 
 .about-container {
@@ -98,6 +125,8 @@ h1 {
 .about-container p {
     margin: 0px auto;
     width: 85%;
+    text-align: left;
+    width: 60%;
 }
 
 .about-container button {
@@ -116,37 +145,68 @@ hr {
 
 .wic {
     background-image: url("../image/background4.png");
+    min-height: 500px;
 }
 
 .wic h2 {
-    padding-top: 100px;
+    padding-top: 15vh;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .skill-container h3 {
-    color: chocolate;
+    color: #ff9100;
+}
+
+.black h3 {
+    color: rgb(0, 0, 0);
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
 }
 
 .skill-container {
+    min-width: 200px;
     text-align: center;
     width: 25%;
-    float: left;
-    height: 45vh;
+    height: 25vh;
+    margin-top: 10vh;
 }
 
-.skill-container#last {
+/* .skill-container#last {
     text-align: center;
     width: 25%;
     height: 49vh;
-}
-
-.pizdec {
-    color: rgba(240, 248, 255, 0);
-}
+} */
 
 .cases {
     text-align: center;
 }
 
+.about-project {
+    margin-right: 10%;
+}
+
+.project {
+    display: flex;
+    width: 80%;
+    margin-left: 10%;
+    text-align: left;
+}
+
+.project h3 {
+    margin-block-end: 0em;
+}
+
+.project p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
 
 .cases button {
     color: white;
@@ -170,17 +230,28 @@ h2 {
 
 .calculation {
     text-align: center;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.calculation h3 {
+    text-align: left;
+    text-transform: uppercase;
 }
 
 .calculation select {
     background-color: #eeeeee;
     border: 0px solid white;
     height: 50px;
-    width: 75%;
+    width: 100%;
+    outline: none;
 }
 
 .statistics {
     background-image: url(../image/background3.png);
+    min-height: 490px;
 }
 
 .statistics h2 {
@@ -200,14 +271,11 @@ h2 {
     text-align: center;
 }
 
-.url {
-    text-align: center;
-}
-
 .contacts {
     background-image: url(../image/background2.png);
     color: aliceblue;
     height: 105vh;
+    text-align: center;
 }
 
 .contacts h2 {
@@ -215,9 +283,26 @@ h2 {
 }
 
 .info {
-    text-align: center;
-    width: 33.3%;
-    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5vh;
+    margin-bottom: 15px;
+}
+
+.info-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+h4 {
+    margin: 0px;
+}
+
+.info img {
+    height: 40%;
+    width: 30%;
 }
 
 .contacts button {
@@ -229,6 +314,7 @@ h2 {
 
 .message {
     text-align: center;
+    margin-block-start: 0%;
 }
 
 .location {
@@ -247,18 +333,37 @@ h2 {
 
 textarea {
     resize: none;
-    height: 100px;
-    width: 60%;
-    margin-right: 2%;
-    min-width: 300px;
+    height: 13vh;
+    width: 49.7%;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.8);
 }
 
+textarea::-webkit-input-placeholder {
+    color: black;
+}
+
+/* Разметить как таблицу */
 input {
-    height: 40px;
-    width: 28.45%;
-    margin-right: 2%;
-    margin-bottom: 10px;
-    min-width: 300px;
+    height: 5vh;
+    width: 46%;
+    margin-bottom: 1%;
+    min-width: 25%;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.input-container {
+    display: flex;
+    justify-content:space-between;
+    width: 50%;
+    margin-right: 25%;
+    margin-left: 25%;
+}
+
+input::-webkit-input-placeholder {
+    color: black;
 }
 
 button {
@@ -279,15 +384,16 @@ button:hover {
     transition: All 0.5s ease;
 }
 
-.rewiews {
-    /* Указываем высоту которую мы будем видеть */
-    /*height: 190px;
-    /* говорим что нужен для этого блока скролы */
-    /* overflow: auto;  чтоб он сам догадвался что именно нужно*/
-    /* overflow: scroll; и так и сяк*/
-    /* ещё можно так */
-    /*overflow-x: hidden;*/
-    /*overflow-y: scroll;*/
+.url {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 4vh;
+}
+
+.url img {
+    height: 85%;
 }
 
 /* чтоб крол был поверх контента */
@@ -295,22 +401,13 @@ body {
     overflow: overlay;
 }
 
-/* стилиизация скрола */
 body::-webkit-scrollbar {
-    width: 10px;
-    /* ширина scrollbar */
-}
-
-body::-webkit-scrollbar-track {
-    /* background: orange;        цвет дорожки */
+    width: 0.7em;
 }
 
 body::-webkit-scrollbar-thumb {
     background-color: rgb(137, 164, 192);
-    /* цвет плашки */
     border-radius: 20px;
-    /*закругления плашки */
-    /* border: 3px solid orange;  padding вокруг плашки */
 }
 
 .calculation>hr {
@@ -319,14 +416,31 @@ body::-webkit-scrollbar-thumb {
     border-radius: 0px;
     background: #d1d1d1;
     border-color: #d1d1d1;
-    width: 74.5%;
+    width: 100%;
 }
 
-@media (orientation: portrait), (max-width: 1000px) {
-    .skill-container {
-        width: 100%;
-        float: none;
-        height: 20vh;
+@media (orientation: portrait),
+(max-width: 800px) {
+    .content-title {
+        display: block;
+    }
+
+    .content-title .right {
+        position: relative;
+        top: -30vh;
+        left: -5%;
+    }
+
+    @keyframes my_animation {
+        from {
+            left: -800px;
+            opacity: 0
+        }
+
+        to {
+            left: 0vw;
+            opacity: 1
+        }
     }
 
     .wic {
@@ -347,17 +461,20 @@ body::-webkit-scrollbar-thumb {
         padding-top: 20px;
     }
 
-    .logo{
+    .logo {
         padding-left: 0px;
     }
 
-    .content-title .left{
-        float: none;
+    .content-title .left {
         color: white;
+        z-index: 1000;
     }
 
-    .title-container{
-        filter: brightness(50%);
-        background-color:rgba(0, 0, 0, .5);
+    .title-container {
+        background-color: rgb(0, 0, 0);
+    }
+
+    .title-container img {
+        filter: brightness(65%);
     }
 }
