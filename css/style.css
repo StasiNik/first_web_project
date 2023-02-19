@@ -54,30 +54,6 @@ ul {
     animation-fill-mode: backwards;
 }
 
-.del#_1 {
-    animation-delay: 1s;
-}
-
-.del#_2 {
-    animation-delay: 1.3s;
-}
-
-.del#_3 {
-    animation-delay: 1.6s;
-}
-
-.del#_4 {
-    animation-delay: 1.9s;
-}
-
-.del#_5 {
-    animation-delay: 2.2s;
-}
-
-.del#_6 {
-    animation-delay: 2.5s;
-}
-
 @keyframes slide {
     from {
         top: -60px;
@@ -286,6 +262,11 @@ h2 {
     height: 50px;
     width: 100%;
     outline: none;
+}
+
+.result {
+    display: flex;
+    justify-content:space-between;
 }
 
 .statistics {
